@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Result</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* fills screen nicely */
+    }
+  </style>
 </head>
 <body>
 
-  <h2 id="staffDisplay"></h2>
-
-  <img src="image.jpg" alt="Result Image" style="max-width: 300px;">
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
-
-    document.getElementById("staffDisplay").textContent =
-      id ? "Staff ID: " + id : "No ID provided";
-  </script>
+  <img src="image.jpg" alt="Result Image">
 
 </body>
 </html>
