@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Staff Lookup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 12px;
+      width: 220px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin-left: 10px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 🔁 Replace with your logo -->
+    <img src="logo.png" alt="Logo">
+
+    <form id="form">
+      <input type="text" id="staffId" placeholder="Enter Staff ID" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const id = document.getElementById("staffId").value.trim();
+
+      if (!id) return;
+
+      // Redirect to second page with ID in URL
+      window.location.href = "result.html?id=" + encodeURIComponent(id);
+    });
+  </script>
+
+</body>
+</html>

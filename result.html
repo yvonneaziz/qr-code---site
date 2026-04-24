@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    img {
+      max-width: 90%;
+      border-radius: 12px;
+    }
+
+    .id {
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="id" id="staffDisplay"></div>
+
+  <!-- 🔁 Replace with your image -->
+  <img src="image.jpg" alt="Result Image">
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    document.getElementById("staffDisplay").textContent =
+      id ? "Staff ID: " + id : "No ID provided";
+  </script>
+
+</body>
+</html>
